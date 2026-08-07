@@ -1,29 +1,54 @@
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: "Montserrat", sans-serif;
+@font-face {
+    font-family: bricolage;
+    src: url(fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
 }
-header{
-    background-color: #B3D8FF;
-    color: #000000;
-    max-width: 800px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 30px;
-    border: 5px solid #ffffff;
-    border-radius: 20px;
+@font-face {
+    font-family: inter;
+    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
 }
-main{
+body {
+    background-color: #DEDEDE;
+    font-family: inter, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+header {
     background-color: #ffffff;
-    color: #000000;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
-}
-footer{
-    text-align: center;
-    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.h1{
-    text-align: left;
+.container{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+button{
+    font-family: brincolage, Helvetica, sans-serif;
+    margin-right: 20px;
+    font-family: brincolage, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 6px;
+    border-radius: 40px;
+    border: 9px solid transparent;
+}
+button:hover {
+    background-color: #8F8F8F;
+    color: #fff;
+    cursor: pointer;
+}
+.h1- {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+h1 {
+    font-family: brincolage, Helvetica, sans-serif;
 }
