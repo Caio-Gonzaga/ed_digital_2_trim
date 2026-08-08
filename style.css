@@ -6,6 +6,7 @@
     font-family: inter;
     src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
 }
+
 body {
     background-color: #DEDEDE;
     font-family: inter, Helvetica, sans-serif;
@@ -13,12 +14,15 @@ body {
     margin: 0;
     
 }
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
 header {
-    background-color: #ffffff;
+    background-color: #f5f4f4;
     width: 100%;
     box-sizing: border-box;
     padding: 20px 40px;
-    
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,10 +41,12 @@ button{
     padding: 6px;
     border-radius: 40px;
     border: 9px solid transparent;
+    color: #000;
+    background-color: #b4b3b3;
 }
 button:hover {
-    background-color: #8F8F8F;
-    color: #fff;
+    background-color: #012d4b;
+    color: #ffffff;
     cursor: pointer;
 }
 .h1- {
@@ -48,6 +54,7 @@ button:hover {
     justify-content: flex-start;
     padding-left: 100px;
     padding-top: 50px;
+    font-family: brincolage, Helvetica, sans-serif;
 }
 h1 {
     font-family: brincolage, Helvetica, sans-serif;
