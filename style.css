@@ -18,7 +18,7 @@ body {
     
 }
 main {
-    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
 }
 header {
     background-color: #f5f4f4;
@@ -36,7 +36,12 @@ header {
 }
 
 h1 {
-    font-family: roboto, Helvetica, sans-serif;
+    font-family: roboto;
     font-size: 40px;
     text-align: center;
+}
+img{
+    display: block;
+    margin: 0 auto;
+   
 }
