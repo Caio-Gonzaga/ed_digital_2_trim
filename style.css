@@ -11,7 +11,7 @@
     src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
 }
 body {
-    background-color: #000000;
+    background-color: #ffffff;
     font-family: inter, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
@@ -21,13 +21,17 @@ main {
     color: #000;
 }
 header {
-    background-color: #646464;
+    background-color: #3f3e3e;
     width: 100%;
-    padding: 7px;
-    border-radius: 30px;
+    height: 90px;
+    padding: 1px;
+    display: flex;
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
+}
+button{
+
 }
 
 .container{
@@ -36,15 +40,17 @@ header {
 }
 
 h1 {
+    
     font-family: roboto;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     color: #FFF;
 }
-img{
+.img{
+    width: 99%;
+    border-radius: 40px;
+    height: auto;
     display: block;
     margin: 0 auto;
-    padding: 50px;
-    width: 1300px;
-    max-height: 1300px;
+    padding: 5px;
 }
