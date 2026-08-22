@@ -1,10 +1,10 @@
 @font-face {
     font-family: bricolage;
-    src: url(fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
+    src: url(fonts/BricolageGrotesque-VariableFont_opsz_wdth_wght.ttf);
 }
 @font-face {
     font-family: inter;
-    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
+    src: url(fonts/Inter-VariableFont_opsz_wght.ttf);
 }
 @font-face {
     font-family: roboto;
@@ -16,25 +16,33 @@
 }
 @font-face {
     font-family: dm;
-    src: url(fonts/DMSans-VariableFont_opsz\,wght.ttf);
+    src: url(fonts/DMSans-VariableFont_opsz_wght.ttf);
 }
 @font-face {
     font-family: oswald;
     src: url(fonts/Oswald-VariableFont_wght.ttf);
 }
+
+* {
+    box-sizing: border-box;
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 section{
     scroll-margin-top: 90px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 body {
     background-color: #ffffff;
     font-family: inter, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    
+    overflow-x: hidden;
 }
 main {
     color: #000;
@@ -43,13 +51,15 @@ main {
 }
 .img-card{
     width: 100%;
+    height: auto;
+    display: block;
 }
 .a-card{
     text-decoration: none;
-    margin: 0 50px;
+    margin: 0 30px;
     text-align: center;
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 30px;
     color: #1b1b1b;
     border-bottom: 2px solid transparent;
     font-family: dm;
@@ -57,86 +67,76 @@ main {
 .a-card:hover{
     color: #e8a93b;
     border-bottom: 2px solid #e8a93b;
-;
 }
 hr{
     padding: 1px;
     background-color:#464545;
+    border: none;
+    margin: 20px auto;
+    max-width: 900px;
 }
-.h1-burguer{
-    padding-left: 500px;
-    font-family: oswald, sans-serif;
-    color: #303030;
-}
-.h3-burguer{
-    padding-left: 600px;
-    color: #303030;
-    font-family: Oswald, sans-serif;
-    margin-bottom: 0;
-}
-.h4-burguer{
-    padding-left: 600px;
-    color: #1b1b1b;
-    margin-top: 1px;
-}
-
-.h1-bebidas{
-    margin-top: 300px;
-    padding-left: 500px;
-    font-family: oswald, sans-serif;
-    color: #303030;
-}
-.h3-bebidas{
-    padding-left: 600px;
-    color: #303030;
-    font-family: Oswald, sans-serif;
-    margin-bottom: 0;
-}
-.h4-bebidas{
-    padding-left: 600px;
-    color: #1b1b1b;
-    margin-top: 1px;
-}
-
+.h1-burguer,
+.h1-bebidas,
 .h1-sobremesa{
-    margin-top: 300px;
-    padding-left: 500px;
+    padding-left: 0;
+    margin-top: 60px;
     font-family: oswald, sans-serif;
     color: #303030;
+    font-size: clamp(24px, 4vw, 32px);
 }
+.h3-burguer,
+.h3-bebidas,
 .h3-sobremesa{
-    padding-left: 600px;
+    padding-left: 0;
     color: #303030;
     font-family: Oswald, sans-serif;
     margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    font-size: clamp(16px, 2.5vw, 20px);
 }
+.h4-burguer,
+.h4-bebidas,
 .h4-sobremesa{
-    padding-left: 600px;
+    padding-left: 0;
     color: #1b1b1b;
     margin-top: 1px;
+    font-size: clamp(14px, 2vw, 16px);
+}
+.preco{
+    color: #e8a93b;
+    white-space: nowrap;
+    font-family: dm, sans-serif;
 }
 header {
     background-color: #1b1b1b;
     width: 100%;
-    height: 90px;
-    padding: 40px;
-    padding-right: 100px;
+    padding: 20px 40px;
     display: flex;
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .h3 {
     font-family: anton, sans-serif;
-    font-size: 35px;
-    padding-left: 300px;
+    font-size: clamp(20px, 4vw, 35px);
     color: #FFF;
+    margin: 0;
+    white-space: nowrap;
 }
 .span-h3{
     color: #e8a93b;
 }
 .nav-header{
-    margin: 0 20px; /*separar os buttons*/
+    margin: 0 20px;
     padding: 7px;
     border-radius: 20px;
     background-color: transparent;
@@ -144,6 +144,7 @@ header {
     color: white;
     display: flex;
     text-decoration: none;
+    flex-wrap: wrap;
 }
 .nav-header:hover{
     color: #e8a93b;
@@ -158,23 +159,26 @@ footer{
     justify-content: space-between;
     align-items: center;
     font-family: roboto;
-    justify-content: center;
 }
 .small-footer{
     color: #FFF;
     display: flex;
-    justify-content: space-between; /* small na esquerda, botão na direita */
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1100px;
     box-sizing: border-box;
-    padding: 20px 400px;
-     
+    padding: 20px 40px;
+    gap: 16px;
+    text-align: center;
 }
 .h1-footer{
     font-family: anton, sans-serif;
     justify-content: center;
     color: #FFF;
     margin: 0 0 12px;
+    font-size: clamp(24px, 4vw, 32px);
 }
 .span-h1-footer{
     color: #e8a93b;
@@ -209,17 +213,22 @@ footer{
     color:#ffffff;
     justify-content: space-between;
     max-width: 200px;
-
 }
 .footer-top{
     display: flex;
-    justify-content: space-between; /* marca na esquerda, cardápio na direita */
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
     max-width: 1100px;
     box-sizing: border-box;
     padding: 40px;
-    gap: 60px;
+    gap: 40px;
+}
+.footer-top > div,
+.footer-top > ul,
+.footer-top > .ul-footer-fun {
+    flex: 1 1 220px;
 }
 
 .button-footer{
@@ -239,4 +248,64 @@ footer{
 .button-footer:hover{
     color: #C4AA06;
     background-color: #5E3100;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+    .small-footer {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-top {
+        justify-content: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .footer-top > div,
+    .footer-top > ul,
+    .footer-top > .ul-footer-fun {
+        flex: 1 1 100%;
+    }
+    .p-footer br {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+    .a-card {
+        margin: 0 15px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .h3 {
+        font-size: 22px;
+    }
+    .nav-header {
+        margin: 0 6px;
+        padding: 5px;
+        font-size: 14px;
+    }
+    .h3-burguer,
+    .h3-bebidas,
+    .h3-sobremesa {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    .small-footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .a-card {
+        margin: 0 10px;
+        font-size: 14px;
+    }
 }
